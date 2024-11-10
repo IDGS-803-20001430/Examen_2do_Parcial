@@ -33,8 +33,11 @@ const ProductDetails = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    navigate('/sales');
+  };
+
   const handlePurchase = () => {
-    // Mostrar el SweetAlert de confirmación con una cantidad predeterminada de 1
     Swal.fire({
       title: '¿Estás seguro de que quieres comprar este producto?',
       text: "La cantidad será 1 por defecto.",
@@ -44,14 +47,12 @@ const ProductDetails = () => {
       cancelButtonText: 'Cancelar',
     }).then((result) => {
       if (result.isConfirmed) {
-        // Si el usuario confirma, continuamos con la compra
         const cantidad = 1;
         const datosCompra = {
           productId: detalleProducto.id,
           amount: cantidad,
         };
         Swal.fire('¡Compra finalizada!', 'Tu compra ha realizada.', 'success');
-        // Llamamos a la función que realizará la compra
         realizarCompra(datosCompra);
         navigate('/sales'); 
       }
@@ -79,11 +80,11 @@ const ProductDetails = () => {
     <div className="product-details-container">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <img
-          src="/public/images/logo.png"
+          src="https://www.pngall.com/wp-content/uploads/2016/05/Shopping-Bag-PNG-Pic.png"
           alt="Logo"
           className="mb-4"
           style={{ width: '50px', cursor: 'pointer' }}
-          onClick={handlePurchase}
+          onClick={handleLogoClick}
         />
         <div className="input-group">
           <input
@@ -144,7 +145,7 @@ const ProductDetails = () => {
       </div>
 
       <div className="d-flex justify-content-center">
-        <button className="btn btn-primary" onClick={handlePurchase}>Comprar</button>
+        <button className="btn btn-info" onClick={handlePurchase}>Comprar</button>
       </div>
     </div>
   );

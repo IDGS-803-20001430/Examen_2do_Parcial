@@ -41,7 +41,7 @@ const SalesList = () => {
         ))}
       </ul>
       <div className="text-center mt-4">
-        <button className="btn btn-primary" onClick={handleExit}>Salir</button>
+        <button className="btn btn-info" onClick={handleExit}>Salir</button>
       </div>
     </div>
   );

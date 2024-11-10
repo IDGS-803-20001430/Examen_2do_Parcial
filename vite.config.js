@@ -14,9 +14,9 @@ export default defineConfig({
       injectRegister: 'auto',
       includeAssets: ['/android','/ios', '/windows11'],
       manifest: {
-          name: 'EXAMEN PARCIAL DOS',
-          short_name: 'PWA EXAMEN 2DO',
-          description: 'React Pwa Examen',
+          name: 'Bazar Universal',
+          short_name: 'Bazar PWA',
+          description: 'Aplicación Bazar React PWA',
           theme_color: '#ffffff',
           "icons": [
             {

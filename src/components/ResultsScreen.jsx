@@ -78,7 +78,7 @@ const ResultsScreen = () => {
     <div className="results-container">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <img
-          src="/public/images/logo.png"
+          src="https://www.pngall.com/wp-content/uploads/2016/05/Shopping-Bag-PNG-Pic.png"
           alt="Logo"
           className="mb-4"
           style={{ width: '50px', cursor: 'pointer' }}
